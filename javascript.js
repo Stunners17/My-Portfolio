@@ -225,47 +225,6 @@ activeStyle.textContent = `
 document.head.appendChild(activeStyle);
 
 // ========================================
-// Mobile Menu Toggle (Optional Enhancement)
-// ========================================
-
-function addMobileMenuToggle() {
-  const header = document.querySelector('.site-header');
-  const nav = document.querySelector('.main-nav');
-  
-  // Check if on mobile
-  if (window.innerWidth > 768) return;
-
-  // Create menu toggle button
-  const toggleButton = document.createElement('button');
-  toggleButton.className = 'mobile-menu-toggle';
-  toggleButton.innerHTML = '☰';
-  toggleButton.setAttribute('aria-label', 'Toggle menu');
-  toggleButton.style.cssText = `
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-dark);
-  `;
-
-  // Show toggle on mobile
-  if (window.innerWidth <= 768) {
-    toggleButton.style.display = 'block';
-    header.querySelector('.header-inner').insertBefore(toggleButton, nav);
-  }
-
-  // Toggle menu visibility
-
-
-  // Close menu on link click
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.style.display = 'none';
-      toggleButton.innerHTML = '☰';
-    });
-  });
-}
 
 // ========================================
 // Scroll Progress Indicator (Optional)
