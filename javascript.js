@@ -256,10 +256,7 @@ function addMobileMenuToggle() {
   }
 
   // Toggle menu visibility
-  toggleButton.addEventListener('click', function() {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    this.innerHTML = nav.style.display === 'flex' ? '✕' : '☰';
-  });
+
 
   // Close menu on link click
   nav.querySelectorAll('a').forEach(link => {
